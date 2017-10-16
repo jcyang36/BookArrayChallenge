@@ -21,19 +21,22 @@ public class Main {
 String repeatSwitch ="";
 
     while (!repeatSwitch.equalsIgnoreCase("Quit")) {
-        //check to make sure that i is less than length of array.
-        if (i>=titleArray.length){
-            break;
-        }
+
+
         System.out.println("Enter the book title: ");
         titleArray[i] = scan.nextLine();
         System.out.println("Enter the author: ");
         authorArray[i] = scan.nextLine();
         System.out.println("Enter the description: ");
         descriptionArray[i] = scan.nextLine();
+        i++;
+        //check to make sure that i is less than length of array.
+        if (i>=titleArray.length){
+            break;
+        }
         System.out.println("Would you like to continue? Enter any key to continue or Quit to exit");
         repeatSwitch= scan.nextLine();
-        i++;
+
     }
 
     int total=i;
